@@ -1,0 +1,37 @@
+Question-1
+For the given JSON iterate over al for loops(for, for in, for of, for Each)
+
+// Given JSON data
+const jsonData = {
+  name: "John Doe",
+  age: 30,
+  email: "johndoe@example.com",
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    country: "USA"
+  },
+  hobbies: ["reading", "coding", "traveling"]
+};
+
+// Using for loop
+for (let key in jsonData) {
+  console.log(key + ": " + jsonData[key]);
+}
+
+// Using for...in loop
+for (let key in jsonData) {
+  if (jsonData.hasOwnProperty(key)) {
+    console.log(key + ": " + jsonData[key]);
+  }
+}
+
+// Using for...of loop (for arrays)
+for (let hobby of jsonData.hobbies) {
+  console.log(hobby);
+}
+
+// Using forEach loop (for arrays)
+jsonData.hobbies.forEach(function(hobby) {
+  console.log(hobby);
+});
